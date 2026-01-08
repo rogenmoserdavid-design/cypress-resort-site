@@ -274,9 +274,9 @@ export default function SpaPage() {
             </motion.p>
             <motion.div variants={fadeInUp} whileTap={{ scale: 0.95 }}>
               <Link
-                href="https://app.mews.com/distributor/731c8c9f-31b9-403c-8806-b2f700cc24f5"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/book"
+                
+                
                 className="inline-block px-12 py-5 bg-gold text-forest text-sm md:text-base tracking-widest uppercase font-medium hover:bg-gold-light transition-colors cta-breathe"
               >
                 Book Your Stay

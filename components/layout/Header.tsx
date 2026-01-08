@@ -73,9 +73,7 @@ export function Header() {
           {/* Book Now Button */}
           <div className="hidden lg:block">
             <Link
-              href="https://app.mews.com/distributor/731c8c9f-31b9-403c-8806-b2f700cc24f5"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/book"
               className={`px-6 py-3 text-sm tracking-widest uppercase transition-all duration-300 ${
                 isScrolled
                   ? "bg-forest text-cream hover:bg-forest-light"
@@ -165,9 +163,7 @@ export function Header() {
                 className="mt-8"
               >
                 <Link
-                  href="https://app.mews.com/distributor/731c8c9f-31b9-403c-8806-b2f700cc24f5"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/book"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="px-8 py-4 bg-forest text-cream text-sm tracking-widest uppercase hover:bg-forest-light transition-colors"
                 >

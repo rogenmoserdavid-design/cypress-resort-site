@@ -264,9 +264,9 @@ export default function VillasPage() {
               </p>
               <motion.div whileTap={{ scale: 0.95 }} className="inline-block">
                 <Link
-                  href="https://app.mews.com/distributor/731c8c9f-31b9-403c-8806-b2f700cc24f5"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/book"
+                  
+                  
                   className="inline-block px-10 py-4 bg-forest text-cream text-sm md:text-base tracking-widest uppercase font-medium hover:bg-forest-light transition-colors"
                 >
                   Check Availability
@@ -466,9 +466,9 @@ export default function VillasPage() {
             </motion.p>
             <motion.div variants={fadeInUp} whileTap={{ scale: 0.95 }}>
               <Link
-                href="https://app.mews.com/distributor/731c8c9f-31b9-403c-8806-b2f700cc24f5"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/book"
+                
+                
                 className="inline-block px-12 py-5 bg-forest text-cream text-sm md:text-base tracking-widest uppercase font-medium hover:bg-forest-light transition-colors cta-breathe"
               >
                 Book Your Villa
