@@ -278,16 +278,37 @@ export default function BookingFlow() {
   return (
     <BookingContext.Provider value={contextValue}>
       <div className="min-h-screen bg-cream">
+        {/* Top Header with Logo */}
+        <header className="bg-forest text-cream">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="2" opacity="0.3"/>
+                <path d="M50 15 L50 85 M30 25 Q50 40 70 25 M25 40 Q50 55 75 40 M20 55 Q50 70 80 55" stroke="currentColor" strokeWidth="2" fill="none"/>
+              </svg>
+              <span className="font-heading text-xl tracking-wide">Cypress Resort</span>
+            </a>
+            <a href="/" className="text-cream/70 text-sm hover:text-cream transition-colors flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              Back to Site
+            </a>
+          </div>
+        </header>
+
+        {/* Progress Bar */}
         {showSidebar && (
-          <div className="sticky top-0 z-40 bg-cream/95 backdrop-blur-sm border-b border-stone/10">
-            <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="sticky top-0 z-40 bg-cream border-b border-stone/10 shadow-sm">
+            <div className="max-w-5xl mx-auto px-6 py-6">
               <BookingProgress />
             </div>
           </div>
         )}
 
-        <div className="max-w-7xl mx-auto px-6 py-8 lg:py-12">
-          <div className={showSidebar ? 'lg:grid lg:grid-cols-[1fr_380px] lg:gap-12' : ''}>
+        {/* Main Content */}
+        <div className="max-w-7xl mx-auto px-6 py-10 lg:py-14">
+          <div className={showSidebar ? 'lg:grid lg:grid-cols-[1fr_380px] lg:gap-16' : ''}>
             <main className="min-h-[60vh]">
               <AnimatePresence mode="wait" custom={direction}>
                 <motion.div
@@ -305,7 +326,7 @@ export default function BookingFlow() {
 
             {showSidebar && (
               <aside className="hidden lg:block">
-                <div className="sticky top-28">
+                <div className="sticky top-36">
                   <BookingSummary />
                 </div>
               </aside>
@@ -313,8 +334,9 @@ export default function BookingFlow() {
           </div>
         </div>
 
+        {/* Mobile Bottom Bar */}
         {showSidebar && state.currentStep > 1 && (
-          <div className="fixed bottom-0 left-0 right-0 bg-cream border-t border-stone/20 p-4 lg:hidden z-50">
+          <div className="fixed bottom-0 left-0 right-0 bg-cream border-t border-stone/20 p-4 lg:hidden z-50 shadow-lg">
             <div className="flex items-center justify-between max-w-lg mx-auto">
               <div>
                 <p className="text-stone text-xs uppercase tracking-wide">
